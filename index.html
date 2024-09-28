@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Combined Functionality</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="container">
+      <!-- Progress bar positioned at the top -->
+      <div class="progress-bar">
+        <div class="progress-step active">
+          1
+          <span class="progress-text">Customize Coffee </span>
+        </div>
+        <div class="progress-step">
+          2
+          <span class="progress-text">ACCOUNT SETUP</span>
+        </div>
+        <div class="progress-step">
+          3
+          <span class="progress-text">PERSONAL DETAILS</span>
+        </div>
+      </div>
+
+      <!-- Content Show/Hide Section -->
+      <div id="outer-content">
+        <h1 class="title">1. Customize Coffee</h1>
+        <p class="subtitle">
+          Find out how the Gift subscriptions work <a href="#">Learn more</a>
+        </p>
+
+        <!-- Step sections -->
+        <section class="step" id="step1">
+          <div class="options">
+            <div class="option" id="whole-bean">
+              <h3>Whole Bean</h3>
+              <p>Recommended for the freshest coffee</p>
+            </div>
+          </div>
+        </section>
+
+        <div id="whole-bean-content" class="hidden">
+            <section class="step" id="step2">
+              <h2>2. The First Delivery</h2>
+              <div class="first-delivery">
+                <div class="delivery-box">
+                  <h4>
+                    THE FIRST SUBSCRIPTION DELIVERY IS THE COLD BREW EXPLORER BOX
+                  </h4>
+                  <p>
+                    Five fresh-roasted, single origin coffees from around the world
+                    can select their preferred coffee profiles for future deliveries
+                    after tasting the coffees.
+                  </p>
+                </div>
+              </div>
+            </section>
+            <section class="step hidden" id="step3">
+              <h2>3. Choose Future Deliveries</h2>
+              <div class="options">
+                <div class="option" id="oz8">
+                  <h3>8 oz</h3>
+                  <p>14 cups / 1 drinker</p>
+                </div>
+                <div class="option" id="oz12">
+                  <h3>12 oz</h3>
+                  <p>22 cups / 1-2 drinkers</p>
+                </div>
+                <div class="option" id="pound">
+                  <h3>1 Pound</h3>
+                  <p>32 cups / 1-2 drinkers</p>
+                </div>
+              </div>
+            </section>
+            <section class="step hidden" id="step4">
+              <h2>4. How Often?</h2>
+              <div class="options">
+                <div class="option" id="monthly">
+                  <h3>Every Month</h3>
+                </div>
+                <div class="option" id="biweekly">
+                  <h3>Every Two Weeks</h3>
+                </div>
+              </div>
+            </section>
+            <section class="step hidden" id="step5">
+              <h2>5. How Long?</h2>
+              <div class="options">
+                <div class="option">
+                  <h3>One Year</h3>
+                  <p>Includes 10 boxes</p>
+                </div>
+                <div class="option">
+                  <h3>Six Months</h3>
+                  <p>Includes 5 boxes</p>
+                </div>
+                <div class="option">
+                  <h3>Three Months</h3>
+                  <p>Includes 2 boxes</p>
+                </div>
+              </div>
+            </section>
+          </div>
+      </div>
+
+      <!-- Form hidden initially, shown after clicking "Next" -->
+      <form id="signup-form" class="form-step hidden">
+        <div class="form-step active" id="step-1">
+          <input type="email" placeholder="Email" required />
+          <input type="password" placeholder="Password" required />
+          <input type="password" placeholder="Confirm Password" required />
+        </div>
+
+        
+
+        <div class="form-step" id="step-3">
+          <input type="text" placeholder="First Name" required />
+          <input type="text" placeholder="Last Name" required />
+          <input type="tel" placeholder="Phone" required />
+          <div class="btn-group">
+            <button type="submit" class="next-btn">Submit</button>
+          </div>
+        </div>
+      </form>
+
+      <button id="next-button">
+        NEXT <span><img src="right-arrow.webp" alt="" /></span>
+      </button>
+    </div>
+
+    <script src="script.js">
+    </script>
+  </body>
+</html>
