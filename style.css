@@ -182,7 +182,7 @@ span img {
   display: block;
   margin: auto;
   padding: 50px;
-  width: 500px;
+
 }
 
 .btn-group {
@@ -250,6 +250,8 @@ input {
   h1 {
       font-size: 20px; /* Smaller title */
   }
+
+
 
   .btn-group {
       flex-direction: column; /* Stack buttons */
