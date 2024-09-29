@@ -10,6 +10,7 @@ function showSection(id) {
     800
   );
 }
+
 $("#whole-bean").on("click", function () {
   showSection("whole-bean-content");
   showSection("step2");
@@ -18,9 +19,11 @@ $("#whole-bean").on("click", function () {
 $("#step2").on("click", function () {
   showSection("step3");
 });
+
 $("#step3").on("click", function () {
   showSection("step4");
 });
+
 $("#step4").on("click", function () {
   showSection("step5");
 });
@@ -47,11 +50,13 @@ $("#next-button").on("click", function () {
 
 progressStep.on("click", function () {
   const clickedStepIndex = $(this).index();
+
   if (clickedStepIndex <= formStepsNum) {
     formStepsNum = clickedStepIndex;
     updateFormSteps();
     updateProgressBar();
     showSection(`step${formStepsNum + 2}`);
+
     if (formStepsNum === 0) {
       $("#outer-content").show();
       $("#signup-form").hide();
@@ -59,11 +64,13 @@ progressStep.on("click", function () {
       $("#outer-content").hide();
     }
   }
+
   if (clickedStepIndex >= formStepsNum) {
     formStepsNum = clickedStepIndex;
     updateFormSteps();
     updateProgressBar();
     showSection(`step${formStepsNum + 1}`);
+
     if (formStepsNum === 0) {
       $("#outer-content").show();
     } else {
@@ -73,12 +80,13 @@ progressStep.on("click", function () {
   }
 });
 
-function handleBackNavigation() {}
+function handleBackNavigation() { }
 
 function updateFormSteps() {
   formSteps.each(function (index) {
     $(this).toggleClass("active", index === formStepsNum);
   });
+
   if (formStepsNum === formSteps.length - 1) {
     $("#next-button").hide();
   } else {
