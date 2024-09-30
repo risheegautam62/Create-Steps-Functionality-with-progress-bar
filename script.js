@@ -1,13 +1,13 @@
 function showSection(id) {
-  $(".section").hide().addClass("hidden");
-  $("#" + id)
-    .removeClass("hidden")
-    .slideDown(800);
+  $(".section").hide().addClass("hidden"); 
+  $("#" + id) 
+      .removeClass("hidden") 
+      .slideDown(800); 
   $("html, body").animate(
-    {
-      scrollTop: $("#" + id).offset().top,
-    },
-    800
+      {
+          scrollTop: $("#" + id).offset().top, 
+      },
+      600
   );
 }
 
@@ -84,18 +84,16 @@ progressStep.on("click", function () {
   }
 });
 
-function handleBackNavigation() { }
+
 
 function updateFormSteps() {
   formSteps.each(function (index) {
     $(this).toggleClass("active", index === formStepsNum);
   });
-
-  // Show the Next button only when the form is not at the last step
   if (formStepsNum === formSteps.length - 1) {
-    $("#next-button").hide(); // Hide button on the last step
+    $("#next-button").hide();
   } else {
-    $("#next-button").show(); // Show button otherwise
+    $("#next-button").show();
   }
 }
 
