@@ -149,6 +149,14 @@ span img {
   background-color: #4caf50;
 }
 
+.progress-step.complete {
+  background-color: red; 
+  color: white; 
+}
+
+
+
+
 .progress-bar::before {
   content: "";
   position: absolute;
