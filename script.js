@@ -1,13 +1,13 @@
 function showSection(id) {
-  $(".section").hide().addClass("hidden"); 
-  $("#" + id) 
-      .removeClass("hidden") 
-      .slideDown(800); 
+  $(".section").hide().addClass("hidden");
+  $("#" + id)
+    .removeClass("hidden")
+    .slideDown(800);
   $("html, body").animate(
-      {
-          scrollTop: $("#" + id).offset().top, 
-      },
-      600
+    {
+      scrollTop: $("#" + id).offset().top,
+    },
+    600
   );
 }
 
@@ -29,7 +29,6 @@ $("#step4").on("click", function () {
   $("#next-button").show();
 });
 
-// When you click on any option
 $(".option").on("click", function () {
   const stepId = $(this).data("step");
   $(".step").removeClass("active");
@@ -41,7 +40,6 @@ let progressStep = $(".progress-step");
 let formSteps = $(".form-step");
 
 $("#next-button").on("click", function () {
-  // Hide the outer content and show the signup form
   $("#outer-content").slideUp(0, function () {
     $("#signup-form").slideDown(0);
   });
@@ -51,7 +49,6 @@ $("#next-button").on("click", function () {
   updateProgressBar();
 });
 
-// Handle clicks on progress steps
 progressStep.on("click", function () {
   const clickedStepIndex = $(this).index();
 
@@ -84,8 +81,6 @@ progressStep.on("click", function () {
   }
 });
 
-
-
 function updateFormSteps() {
   formSteps.each(function (index) {
     $(this).toggleClass("active", index === formStepsNum);
@@ -108,6 +103,4 @@ function updateProgressBar() {
     }
   });
 }
-
-// Initialize by hiding the Next button
 $("#next-button").hide();
